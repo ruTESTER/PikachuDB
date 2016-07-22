@@ -171,12 +171,12 @@ function gymLabel(team_name, team_id, gym_points) {
     } else {
         str = `
             <div><center>
-            <div style='padding-bottom: 2px'>Gym owned by:</div>
+            <div style='padding-bottom: 2px'>Арена захвачена:</div>
             <div>
-                <b style='color:rgba(${gym_color[team_id]})'>Team ${team_name}</b><br>
+                <b style='color:rgba(${gym_color[team_id]})'>Командой ${team_name}</b><br>
                 <img height='70px' style='padding: 5px;' src='static/forts/${team_name}_large.png'>
             </div>
-            <div>Prestige: ${gym_points}</div>
+            <div>Престиж: ${gym_points}</div>
             </center></div>`;
     }
 
@@ -187,7 +187,7 @@ function gymLabel(team_name, team_id, gym_points) {
 map_pokemons = {} // Pokemon
 map_gyms = {} // Gyms
 map_pokestops = {} // Pokestops
-var gym_types = ["Uncontested", "Mystic", "Valor", "Instinct"];
+var gym_types = ["Неоспоримый", "Мистика", "Отваги", "Инстинкт"];
 
 function setupPokemonMarker(item) {
     var marker = new google.maps.Marker({
@@ -204,7 +204,7 @@ function setupPokemonMarker(item) {
     });
     
     if (notifiedPokemon.indexOf(item.pokemon_id) > -1) {
-        sendNotification('A wild ' + item.pokemon_name + ' appeared!', 'Click to load map', 'static/icons/' + item.pokemon_id + '.png')
+        sendNotification('Зверек ' + item.pokemon_name + ' был обнаружен!', 'Вперёд ловить его', 'static/icons/' + item.pokemon_id + '.png')
     }
 
     addListeners(marker);
@@ -241,7 +241,7 @@ function setupPokestopMarker(item) {
     });
 
     marker.infoWindow = new google.maps.InfoWindow({
-        content: "I'm a Pokéstop, and soon enough I'll tell you more things about me."
+        content: "Привет. Я Покéстоп и скоро я расскажу больше о себе. :3"
     });
 
     addListeners(marker);
