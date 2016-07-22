@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="{{lang}}">
 	<head>
-		<title>Pokémon Go Map</title>
+		<title>PikachuDB Map</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
 		<meta name="apple-mobile-web-app-capable" content="yes">
@@ -37,15 +37,16 @@
 	<div class="wrapper">
 		<!-- Header -->
 		<header id="header">
-			<a href="#nav">Filter</a>
-			<h1><a href="#">Pokémon Go Map</a></h1>
+			<a href="http://pikachudb.ru/">Назад на сайт</a>
+			<a href="#nav">Настройки</a>
+			<h1><a href="#">PikachuDB Map</a></h1>
 		</header>
 
 		<!-- Nav -->
 		<nav id="nav">
-			<p>Filter through Pokémon, Gyms &amp; Pokéstops.</p>
+			<p>Фильтер по Покéмонам, Аренам &amp; Покéстопам.</p>
 			<div class="switch-container">
-				<h3>Pokémon</h3>
+				<h3>Покéмоны</h3>
 				<div class="onoffswitch">
 					<input id="pokemon-switch" type="checkbox" name="pokemon-switch" class="onoffswitch-checkbox" checked/>
 					<label class="onoffswitch-label" for="pokemon-switch">
@@ -55,7 +56,7 @@
 				</div>
 			</div>
 			<div class="switch-container">
-				<h3>Gyms</h3>
+				<h3>Арены</h3>
 				<div class="onoffswitch">
 					<input id="gyms-switch" type="checkbox" name="gyms-switch" class="onoffswitch-checkbox" checked/>
 					<label class="onoffswitch-label" for="gyms-switch">
@@ -65,7 +66,7 @@
 				</div>
 			</div>
 			<div class="switch-container">
-				<h3>Pokéstops</h3>
+				<h3>Покéстопы</h3>
 				<div class="onoffswitch">
 					<input id="pokestops-switch" type="checkbox" name="pokestops-switch" class="onoffswitch-checkbox" checked/>
 					<label class="onoffswitch-label" for="pokestops-switch">
@@ -77,13 +78,13 @@
 			<!-- <button id="trigger-overlay">Test overlay</button> -->
 			<div>
 				<label for="exclude-pokemon">
-					<h3>Hide common Pokémon</h3>
+					<h3>Спрятать выбраных Покéмонов</h3>
 	        		<select id="exclude-pokemon" multiple="multiple"></select>
 	      		</label>
 			</div>
 			<div style="margin-top: 25px;">
 				<label for="notify-pokemon">
-					<h3>Notify of Pokémon</h3>
+					<h3>Уведомлять о Покéмонах</h3>
 					<select id="notify-pokemon" multiple="multiple"></select>
 				</label>
 			</div>
