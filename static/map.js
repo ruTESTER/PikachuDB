@@ -21,14 +21,14 @@ $.getJSON("static/locales/pokemon." + document.documentElement.lang + ".json").d
 
     JSON.parse(readCookie("remember_select_exclude"));
     $selectExclude.select2({
-        placeholder: "Select Pokémon",
+        placeholder: "Выберите Покéмона",
         data: pokeList
     });
     $selectExclude.val(JSON.parse(readCookie("remember_select_exclude"))).trigger("change");
     
     JSON.parse(readCookie("remember_select_notify"));
     $selectNotify.select2({
-        placeholder: "Select Pokémon",
+        placeholder: "Выберите Покéмона",
         data: pokeList
     });
     $selectNotify.val(JSON.parse(readCookie("remember_select_notify"))).trigger("change");
@@ -81,10 +81,10 @@ function initMap() {
         },
     });
 
-	var style_dark = new google.maps.StyledMapType(darkStyle, {name: "Dark"});
+	var style_dark = new google.maps.StyledMapType(darkStyle, {name: "Темная"});
 	map.mapTypes.set('dark_style', style_dark);
 
-	var style_light2 = new google.maps.StyledMapType(light2Style, {name: "Light2"});
+	var style_light2 = new google.maps.StyledMapType(light2Style, {name: "Светлая"});
 	map.mapTypes.set('style_light2', style_light2);
 
 	var style_pgo = new google.maps.StyledMapType(pGoStyle, {name: "PokemonGo"});
@@ -146,15 +146,15 @@ function pokemonLabel(name, disappear_time, id, latitude, longitude) {
             <b>${name}</b>
             <span> - </span>
             <small>
-                <a href='http://www.pokemon.com/us/pokedex/${id}' target='_blank' title='View in Pokedex'>#${id}</a>
+                <a href='http://www.pokemon.com/us/pokedex/${id}' target='_blank' title='Перейти на Pokedex'>#${id}</a>
             </small>
         </div>
         <div>
-            Disappears at ${pad(disappear_date.getHours())}:${pad(disappear_date.getMinutes())}:${pad(disappear_date.getSeconds())}
+            Исчезает в ${pad(disappear_date.getHours())}:${pad(disappear_date.getMinutes())}:${pad(disappear_date.getSeconds())}
             <span class='label-countdown' disappears-at='${disappear_time}'>(00m00s)</span></div>
         <div>
             <a href='https://www.google.com/maps/dir/Current+Location/${latitude},${longitude}'
-                    target='_blank' title='View in Maps'>Get directions</a>
+                    target='_blank' title='Посмотреть на карте'>Получить координаты</a>
         </div>`;
     return contentstring;
 };
